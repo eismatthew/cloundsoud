@@ -36,6 +36,25 @@ class SessionForm extends React.Component {
         );
     }
 
+    render () {
+        return (
+            <div classname='login-form-container'>
+                <form onSubmit={this.handleSubmit} classname='login-form-box'>
+                    Welcome to Cloundsoud
+                    <br/>
+                    
+                
 
+                </form>   
+            </div>
+
+
+
+
+
+
+
+        );
+    }
 
 }
