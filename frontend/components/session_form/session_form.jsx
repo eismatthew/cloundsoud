@@ -1,14 +1,13 @@
 import React from 'react';
 
 class SessionForm extends React.Component {
-
     constructor(props) {
         super(props);
         this.state = {
             username: '',
             password: '',
             email: ''
-        }
+        };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -17,6 +16,8 @@ class SessionForm extends React.Component {
           [field]: e.currentTarget.value
         });
     }
+
+
 
     handleSubmit(e) {
         e.preventDefault();
@@ -38,23 +39,44 @@ class SessionForm extends React.Component {
 
     render () {
         return (
-            <div classname='login-form-container'>
-                <form onSubmit={this.handleSubmit} classname='login-form-box'>
+            <div className='login-form-container'>
+                <form onSubmit={this.handleSubmit} className='login-form-box'>
                     Welcome to Cloundsoud
                     <br/>
-                    
-                
-
+                    Please {this.props.formType} or {this.props.navLink}
+                    {this.renderErrors()}
+                    <div className='login-form'>
+                        <label>Username:
+                            <input type='text'
+                                value={this.state.username}
+                                onChange={this.update('username')}
+                                className="login-input"
+                            />
+                        </label>
+                        <br/>
+                        <label>Email:
+                            <input type='text'
+                                    value={this.state.email}
+                                    onChange={this.update('email')}
+                                    className="login-input"
+                                />
+                        </label>
+                        <br/>
+                        <label>Password:
+                            <input type="password"
+                                    value={this.state.password}
+                                    onChange={this.update('password')}
+                                    className="login-input"
+                            />
+                        </label>
+                        <br/>
+                        <input className="session-submit" type="submit" value={this.props.formType} />
+                    </div>
                 </form>   
             </div>
-
-
-
-
-
-
-
         );
     }
 
 }
+
+export default SessionForm;

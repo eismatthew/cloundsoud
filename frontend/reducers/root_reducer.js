@@ -11,7 +11,7 @@ const rootReducer = combineReducers({
     users: usersReducer,
     errors: errorsReducer
     // ui: uiReducer,
-  });
+});
   
 export default rootReducer;
 
