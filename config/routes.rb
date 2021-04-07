@@ -1,27 +1,37 @@
 Rails.application.routes.draw do
+
+
+  root to: 'static_pages#root'
+
   namespace :api, defaults: {format: :json} do
    
-
-    resources :users, only: [:create, :index]
-    resource :session, only: [:new, :create, :destroy]
-    resources :tracks, only: [:show, :create, :index, :update, :destroy]
-    resources :likes, only: [:create, :destroy]
-    resources :comments, only: [:create, :destroy]
-
-    
+    resources :users, only: [:create, :show]
+    resource :session, only: [:create, :destroy]
+ 
   end
 end
 
 
 
+
+
+
+
+
+
+
+
+
+
+# resources :tracks, only: [:show, :create, :index, :update, :destroy]
+# resources :likes, only: [:create, :destroy]
+# resources :comments, only: [:create, :destroy]
+
+
+
 # 1. Possibly do not need :update for tracks? just :edit?
 
-
-
-
-
-
-#nested routes? not sure
+# 2. nested routes? not sure
 
 
 # Rails.application.routes.draw do
