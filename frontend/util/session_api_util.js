@@ -2,11 +2,11 @@
 
 export const fetchUser = userId => (
     $.ajax({
-        url: '/api/users/'
+        url: `/api/users/${userId}`
     })
 );
 
-export const createUser = user => (
+export const signup = user => (
     $.ajax({
         method: 'POST',
         url: '/api/users',
@@ -14,7 +14,7 @@ export const createUser = user => (
     })
 );
 
-export const loginUser = user => (
+export const login = user => (
     $.ajax({
         method: "POST",
         url: "/api/session",
@@ -22,7 +22,7 @@ export const loginUser = user => (
     })
 );
 
-export const logoutUser = () => (
+export const logout = () => (
      $.ajax({
         method: 'DELETE',
         url: "/api/session"
