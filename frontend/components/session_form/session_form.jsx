@@ -1,12 +1,14 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class SessionForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             username: '',
+            email: '',
             password: '',
-            email: ''
+            credentials: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -17,12 +19,10 @@ class SessionForm extends React.Component {
         });
     }
 
-
-
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user);
+        this.props.processForm(user).then(this.props.closeModal);
     }
     
     renderErrors() {
@@ -38,29 +38,50 @@ class SessionForm extends React.Component {
     }
 
     render () {
+        const formInputs = this.props.formType === 'login' ? (
+            <div>
+                <label>Username or Email:
+                <input type='text'
+                        value={this.state.credentials}
+                        onChange={this.update('credentials')}
+                        className="login-input"
+                        />
+                </label>
+            </div>
+        ) : (
+            <div>
+            <div>
+                <label>Username:
+                        <input type='text'
+                            value={this.state.username}
+                            onChange={this.update('username')}
+                            className="login-input"
+                        />
+                </label>
+            </div>
+            <div>
+                <br/>
+                <label>Email:
+                    <input type='text'
+                            value={this.state.email}
+                            onChange={this.update('email')}
+                            className="login-input"
+                        />
+                </label>
+            </div>
+            </div>
+        )
         return (
             <div className='login-form-container'>
                 <form onSubmit={this.handleSubmit} className='login-form-box'>
-                    Welcome to Cloundsoud
+                    
                     <br/>
-                    Please {this.props.formType} or {this.props.navLink}
+                    {/* Please {this.props.formType} */}
+                    <div onClick={this.props.closeModal} className="close-modal"></div>
                     {this.renderErrors()}
                     <div className='login-form'>
-                        <label>Username:
-                            <input type='text'
-                                value={this.state.username}
-                                onChange={this.update('username')}
-                                className="login-input"
-                            />
-                        </label>
                         <br/>
-                        <label>Email:
-                            <input type='text'
-                                    value={this.state.email}
-                                    onChange={this.update('email')}
-                                    className="login-input"
-                                />
-                        </label>
+                        {formInputs}
                         <br/>
                         <label>Password:
                             <input type="password"
@@ -76,7 +97,6 @@ class SessionForm extends React.Component {
             </div>
         );
     }
-
 }
 
-export default SessionForm;
+export default withRouter(SessionForm);

@@ -12,9 +12,11 @@ import SplashContainer from './splash/splash_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import LogInFormContainer from './session_form/login_form_container';
 import SignUpFormContainer from './session_form/signup_form_container';
+import Modal from './modal/modal';
 
   const App = () => (
       <div>
+        <Modal />
           <header>
               <Link to='/' className='header-link'>
                   <h1>Cloundsoud</h1>
