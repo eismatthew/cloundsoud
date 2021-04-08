@@ -7,6 +7,8 @@ import {
     Link,
     HashRouter
   } from 'react-router-dom';
+
+import SplashContainer from './splash/splash_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import LogInFormContainer from './session_form/login_form_container';
 import SignUpFormContainer from './session_form/signup_form_container';
@@ -17,14 +19,13 @@ import SignUpFormContainer from './session_form/signup_form_container';
               <Link to='/' className='header-link'>
                   <h1>Cloundsoud</h1>
               </Link>
-            <LogInFormContainer />
-            <SignUpFormContainer />
+            <SplashContainer />
           </header>
         <Switch>
             <AuthRoute exact path='/login' component={LogInFormContainer} />
             <AuthRoute exact path='/signup' component={SignUpFormContainer} />
         </Switch>
       </div>
-  );
+);
 
-  export default App;
+export default App;
