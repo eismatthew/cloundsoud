@@ -14,19 +14,7 @@
  *= require_self
  */
 
- ::-webkit-scrollbar {
-    width: 12px;
-}
 
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
-}
 
  body {
    font-family: 'Abel', sans-serif;
@@ -71,7 +59,7 @@ header {
 }
 
 h1, h5 {
-  margin-bottom: 0px;
+  margin-bottom: 20px;
 }
 
 
@@ -105,6 +93,12 @@ h1, h5 {
 
 .login-input {
   margin-left: 20px;
+}
+
+.login-signup {
+  width: 13%;
+  display: flex;
+  justify-content: end;
 }
 
 .login-form-box {

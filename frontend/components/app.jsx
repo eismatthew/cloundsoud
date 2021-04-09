@@ -19,6 +19,7 @@ import Modal from './modal/modal';
         <Modal />
           <header>
               <Link to='/' className='header-link'>
+               
                   <h1>Cloundsoud</h1>
               </Link>
             <SplashContainer />
