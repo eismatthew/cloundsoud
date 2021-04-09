@@ -6,8 +6,11 @@ const Splash = ({ currentUser, logout, openModal }) => {
     const sessionLinks = () => (
     <nav className="login-signup">
       <button onClick={() => openModal('login')}>Login</button>
-      &nbsp;or&nbsp;
+      {/* &nbsp;or&nbsp; */}
       <button onClick={() => openModal('signup')}>Signup</button>
+    <br/>
+      
+      
     </nav>
   );
 
