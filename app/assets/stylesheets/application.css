@@ -96,12 +96,6 @@ title {
 }
 
 
-.user-pane {
-  display: flex;
-  justify-content: center;
-}
-
-
 header {
   margin-left: 1%;
 }
@@ -135,12 +129,11 @@ display: block;
 width: 150px;
 }
 
+label {
+  justify-content: center;
+  align-content: center;
+}
 
-
-/* .header-name {
-  margin: 7px 0 0 0;
-
-}  */
 
 .login-form-container {
   display: flex;
@@ -148,14 +141,20 @@ width: 150px;
   margin-top: 100px;
 }
 
-/* .login-form {
+.login-form {
   display: flex;
   justify-content: center;
   flex-direction: column;
-} */
+}
 
 .login-input {
   margin-left: 20px;
+}
+
+.signup-input {
+  margin-left: 20px;
+  align-content: center;
+  justify-content: center;
 }
 
 .splash-login-signup {
@@ -191,6 +190,16 @@ width: 150px;
   background-color: #ffffff;
 }
 
+
+.session-submit {
+  text-transform: capitalize;
+  width: 150px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+
 .modal-background {
   position: fixed;
   top: 0;
@@ -209,7 +218,15 @@ width: 150px;
 }
 
 .modal-signup {
-  
+  align-content: center;
+  justify-content: center;
+  margin-bottom: -12px;
+}
+
+.modal-login {
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 12px;
 }
 
 .close-modal {
@@ -227,9 +244,5 @@ width: 150px;
 
 hr {
   border-bottom: 1px solid grey;
-}
-
-.session-submit {
-  text-transform: capitalize;
 }
 
