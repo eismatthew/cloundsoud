@@ -43,7 +43,7 @@ const Splash = ({ currentUser, logout, openModal, loginDemoUser }) => {
                 {currentUser ? personalGreeting(currentUser, logout) : <></>}
                 { sessionLinks() }
                 <h1>What's next in music is first on CloundSoud</h1>
-                <p>Upload your first track and begin your journey. SoundCloud gives you space to create, find your fans, and connect with other artists. </p>
+                <p>Upload your first track and begin your journey. CloundSoud gives you space to create, find your fans, and connect with other artists. </p>
             </section>
             <section className='trending-tracks'>
                 <h1>Hear what's trending for free on Cloundsoud</h1>
