@@ -15,16 +15,17 @@ import SignUpFormContainer from './session_form/signup_form_container';
 import Modal from './modal/modal';
 
   const App = () => (
-      <div>
+      <div className='app'>
         <Modal />
           <header>
               <Link to='/' className='header-link'>
                
-                  <h1>Cloundsoud</h1>
+                  {/* <h1>Cloundsoud</h1> */}
               </Link>
             <SplashContainer />
           </header>
         <Switch>
+            <Route render={() => <Redirect to={{pathname: "/"}} />} />
             <AuthRoute exact path='/login' component={LogInFormContainer} />
             <AuthRoute exact path='/signup' component={SignUpFormContainer} />
         </Switch>

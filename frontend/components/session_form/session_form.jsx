@@ -12,6 +12,7 @@ class SessionForm extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemo = this.handleDemo.bind(this);
     }
 
     update(field) {
@@ -40,7 +41,8 @@ class SessionForm extends React.Component {
 
     handleDemo(e) {
         e.preventDefault();
-        this.props.loginDemoUser().then(this.props.closeModal);;
+
+        this.props.loginDemoUser().then(this.props.closeModal);
     }
 
     render () {
@@ -64,10 +66,7 @@ class SessionForm extends React.Component {
                 <br/>
             </div>
         ) : (
-            <div classname='modal-signup'>
-                <div className='modal-demo-login'>
-                    <button className="modal-button" id="demo-login" onClick={(e) => this.handleDemo(e)}>Demo Login</button>
-                </div>
+            <div className='modal-signup'>
                 <div>
                     <label>Username:
                         <input type='text'
@@ -99,6 +98,7 @@ class SessionForm extends React.Component {
 
 
         return (
+            
             <div className='login-form-container'>
                 <form onSubmit={this.handleSubmit} className='login-form-box'>
                     {/* Please {this.props.formType} */}
