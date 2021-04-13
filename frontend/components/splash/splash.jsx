@@ -49,53 +49,53 @@ const Splash = ({ currentUser, logout, openModal, loginDemoUser }) => {
                 <div className='splash-trending-track-container'>
                     <div className='splash-trending-track-item'>
                         <img src={window.skythings} />
-                        <h2>Squeeda</h2>
+                        <h2>squeeda</h2>
                         <h3>sky things</h3>
                     </div>
                     <div className='splash-trending-track-item'>
-                    <img src={window.skythings} />
-                        <h2>Squeeda</h2>
-                        <h3>sky things</h3>
+                    <img src={window.mumbai} />
+                        <h2>Skrillex</h2>
+                        <h3>Mumbai Power</h3>
                     </div>
                     <div className='splash-trending-track-item'>
-                    <img src={window.skythings} />
-                        <h2>Squeeda</h2>
-                        <h3>sky things</h3>
+                    <img src={window.medasin} />
+                        <h2>Medasin</h2>
+                        <h3>Ramen</h3>
                     </div>
                     <div className='splash-trending-track-item'>
-                    <img src={window.skythings} />
-                        <h2>Squeeda</h2>
-                        <h3>sky things</h3>
+                    <img src={window.dancin} />
+                        <h2>KRONO</h2>
+                        <h3>Aaron Smith - Dancin (Krono Remix)</h3>
                     </div>
                     <div className='splash-trending-track-item'>
-                    <img src={window.skythings} />
-                        <h2>Squeeda</h2>
-                        <h3>sky things</h3>
+                    <img src={window.danger} />
+                        <h2>Deathpact</h2>
+                        <h3>Danger</h3>
                     </div>
                     <div className='splash-trending-track-item'>
-                    <img src={window.skythings} />
-                        <h2>Squeeda</h2>
-                        <h3>sky things</h3>
+                    <img src={window.jackal} />
+                        <h2>Jackal</h2>
+                        <h3>Feel It (feat. Anfa Rose)</h3>
                     </div>
                     <div className='splash-trending-track-item'>
-                    <img src={window.skythings} />
-                        <h2>Squeeda</h2>
-                        <h3>sky things</h3>
+                    <img src={window.ktn} />
+                        <h2>Kill The Noise</h2>
+                        <h3>All In My Head (feat. AWOLNATION)</h3>
                     </div>
                     <div className='splash-trending-track-item'>
-                    <img src={window.skythings} />
-                        <h2>Squeeda</h2>
-                        <h3>sky things</h3>
+                    <img src={window.bloom} />
+                        <h2>MSTRE</h2>
+                        <h3>Bloom</h3>
                     </div>
                     <div className='splash-trending-track-item'>
-                    <img src={window.skythings} />
-                        <h2>Squeeda</h2>
-                        <h3>sky things</h3>
+                    <img src={window.bullrun} />
+                        <h2>Project Paradis</h2>
+                        <h3>Bull Run</h3>
                     </div>
                     <div className='splash-trending-track-item'>
-                    <img src={window.skythings} />
-                        <h2>Squeeda</h2>
-                        <h3>sky things</h3>
+                    <img src={window.orbital} />
+                        <h2>MSTRE</h2>
+                        <h3>Orbital (ft. squeeda)</h3>
                     </div>
                 {/* <button className='discover-button' href='/discover'></button> */}
                 </div>
