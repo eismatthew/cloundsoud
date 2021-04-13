@@ -1,6 +1,5 @@
 class Track < ApplicationRecord
     validates :title, :artist_id, presence: true
-    validates :description
     validates :title, uniqueness: {scope: :artist_id}, length: {minimum: 1}
 
 
