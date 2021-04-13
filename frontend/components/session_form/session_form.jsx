@@ -46,7 +46,7 @@ class SessionForm extends React.Component {
     }
 
     render () {
-        const formInputs = this.props.formType === 'Sign In' ? (
+        const formInputs = this.props.formType === 'login' ? (
             <div className='modal-login'>
             <div className='login-input-container'>
                 <label>Username or Email:
@@ -109,10 +109,11 @@ class SessionForm extends React.Component {
                 <form onSubmit={this.handleSubmit} className='login-form-box'>
                     {/* Please {this.props.formType} */}
                     <div onClick={this.props.closeModal} className="close-modal"></div>
-                    {this.renderErrors()}
+                    {/* {this.renderErrors()} */}
                     <div className='login-form'>
                         {formInputs}
                         <input className="session-submit" type="submit" value='Continue'/>
+                        {this.renderErrors()}
                     </div>
                 </form>   
             </div>

@@ -59,7 +59,7 @@
     background-color: #ffffff;
 
     li {
-        font-size: 10px;
+        font-size: 11px;
         color: red;
         align-items: center;
         align-content: center;
@@ -68,6 +68,8 @@
 
     .error-box {
         align-self: inherit;
+        padding-top: 12px;
+        font-size: 14px;
     }
     
 }
