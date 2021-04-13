@@ -22,12 +22,12 @@ import Modal from './modal/modal';
                
                   {/* <h1>Cloundsoud</h1> */}
               </Link>
-            <SplashContainer />
           </header>
         <Switch>
-            <Route render={() => <Redirect to={{pathname: "/"}} />} />
+            <Route exact path='/' component={SplashContainer} />
             <AuthRoute exact path='/login' component={LogInFormContainer} />
             <AuthRoute exact path='/signup' component={SignUpFormContainer} />
+            <Redirect to='/'/>
         </Switch>
       </div>
 );

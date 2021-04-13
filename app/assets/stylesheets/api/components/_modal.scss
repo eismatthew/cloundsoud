@@ -1,0 +1,87 @@
+
+.modal-background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: hsla(0, 0%, 97%, .9);
+    z-index: 10;
+}
+  
+.modal-child {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    width: 450px;
+    height: 550px;
+}
+  
+.modal-signup {
+    align-content: center;
+    justify-content: center;
+    margin-bottom: -12px;
+}
+  
+.modal-login {
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+  
+.close-modal {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 3;
+}
+
+
+.login-form-box {
+    outline: 1px solid black;
+    padding: 10%;
+    width: 260px;
+    height: 180px;
+    background-color: #ffffff;
+}
+  
+  
+.session-submit {
+    text-transform: capitalize;
+    width: 150px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+  
+
+.login-form-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+  
+.login-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+  
+.login-input {
+    margin-left: 20px;
+}
+  
+.signup-input {
+    margin-left: 20px;
+    align-content: center;
+    justify-content: center;
+}
