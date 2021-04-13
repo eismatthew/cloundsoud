@@ -48,7 +48,7 @@ const Splash = ({ currentUser, logout, openModal, loginDemoUser }) => {
                 <h1>Hear what's trending for free on Cloundsoud</h1>
                 <div className='splash-trending-track-container'>
                     <div className='splash-trending-track-item'>
-                        <img src='' />
+                        <img src={window.skythings} />
                         <h2>Squeeda</h2>
                         <h3>sky things</h3>
                     </div>
