@@ -53,53 +53,53 @@ const Splash = ({ currentUser, logout, openModal, loginDemoUser }) => {
                         <h3>sky things</h3>
                     </div>
                     <div className='splash-trending-track-item'>
-                    test
+                    <img src={window.skythings} />
+                        <h2>Squeeda</h2>
+                        <h3>sky things</h3>
                     </div>
                     <div className='splash-trending-track-item'>
-                    test
+                    <img src={window.skythings} />
+                        <h2>Squeeda</h2>
+                        <h3>sky things</h3>
                     </div>
                     <div className='splash-trending-track-item'>
-                    test
+                    <img src={window.skythings} />
+                        <h2>Squeeda</h2>
+                        <h3>sky things</h3>
                     </div>
                     <div className='splash-trending-track-item'>
-                    test
+                    <img src={window.skythings} />
+                        <h2>Squeeda</h2>
+                        <h3>sky things</h3>
                     </div>
                     <div className='splash-trending-track-item'>
-                    test
+                    <img src={window.skythings} />
+                        <h2>Squeeda</h2>
+                        <h3>sky things</h3>
                     </div>
                     <div className='splash-trending-track-item'>
-                    test
+                    <img src={window.skythings} />
+                        <h2>Squeeda</h2>
+                        <h3>sky things</h3>
                     </div>
                     <div className='splash-trending-track-item'>
-                    test
+                    <img src={window.skythings} />
+                        <h2>Squeeda</h2>
+                        <h3>sky things</h3>
                     </div>
                     <div className='splash-trending-track-item'>
-                    test
+                    <img src={window.skythings} />
+                        <h2>Squeeda</h2>
+                        <h3>sky things</h3>
                     </div>
                     <div className='splash-trending-track-item'>
-                    test
+                    <img src={window.skythings} />
+                        <h2>Squeeda</h2>
+                        <h3>sky things</h3>
                     </div>
-                    <div className='splash-trending-track-item'>
-                    test
-                    </div>
-                    <div className='splash-trending-track-item'>
-                    test
-                    </div>
-                    <div className='splash-trending-track-item'>
-                    test
-                    </div>
-                    <div className='splash-trending-track-item'>
-                    test
-                    </div>
-                    <div className='splash-trending-track-item'>
-                    test
-                    </div>
-                    <div className='splash-trending-track-item'>
-                    test
-                    </div>
-                    
+                {/* <button className='discover-button' href='/discover'></button> */}
                 </div>
-                <button className='button-discover' href='/discover'>Discover</button>
+                <button className='discover-button' href='/discover'>Discover</button>
             </section>
             <section className='splash-mobile'>
             <figure />
@@ -118,13 +118,14 @@ const Splash = ({ currentUser, logout, openModal, loginDemoUser }) => {
                 <h2>Thanks for listening. Now join in.</h2>
                 <h4>Save tracks, follow artists, and build playlists. All for free.</h4>
                 <button className='button-signup' onClick={() => openModal('signup')}>Create Account</button>
-                <p>Already have an account?</p>
-                <button className='button-login' onClick={() => openModal('login')}>Sign In</button>
+                <p>Already have an account? <button className='button-login' onClick={() => openModal('login')}>Sign In</button></p>
             </section>
-            {/* <section className='splash-bottom'>   
-            <span><a href="https://github.com/eismatthew">GitHub</a> - <a href="https://www.linkedin.com/in/matthew-eis/">LinkedIn</a></span>
+            <section className='splash-bottom'>   
+            
+            <span><a href="https://github.com/eismatthew">GitHub</a></span>
+            <span><a href="https://www.linkedin.com/in/matthew-eis/">LinkedIn</a></span>
             <p>Language: English (US)</p>
-            </section> */}
+            </section>
         </div>
     );
 
