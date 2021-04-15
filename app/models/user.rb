@@ -2,11 +2,13 @@ class User < ApplicationRecord
     validates :username, presence: true, uniqueness: true
     validates :email, presence: true, uniqueness: true
     validates :session_token, presence: true
-    validates :password, length: {minimum: 6}, allow_nil: true
+    validates :password, length: { minimum: 6 }, allow_nil: true
 
-    # has_many :tracks,
-    # foreign_key: :artist_id,
-    # class_name: :Track
+    has_one_attached :profilepic
+    
+    has_many :tracks,
+    foreign_key: :artist_id,
+    class_name: :Track
 
     # has_many :track_likes, 
     # through: :tracks,

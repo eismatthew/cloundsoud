@@ -80,7 +80,7 @@ const Splash = ({ currentUser, logout, openModal, loginDemoUser }) => {
                     <div className='splash-trending-track-item'>
                     <img src={window.ktn} />
                         <h2>Kill The Noise</h2>
-                        <h3>All In My Head (feat. AWOLNATION)</h3>
+                        <h3>All In My Head (ft. AWOLNATION)</h3>
                     </div>
                     <div className='splash-trending-track-item'>
                     <img src={window.bloom} />
