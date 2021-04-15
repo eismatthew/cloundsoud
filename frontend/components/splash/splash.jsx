@@ -97,9 +97,11 @@ const Splash = ({ currentUser, logout, openModal, loginDemoUser }) => {
                         <h2>MSTRE</h2>
                         <h3>Orbital (ft. squeeda)</h3>
                     </div>
-                {/* <button className='discover-button' href='/discover'></button> */}
+
                 </div>
-                <button className='discover-button' href='/discover'>Discover</button>
+                <Link to='/discover' className='discover-link'>
+                    <button className='discover-button'>Discover</button>
+                </Link>
             </section>
             <section className='splash-mobile'>
             <figure />

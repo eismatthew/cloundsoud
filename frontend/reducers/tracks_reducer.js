@@ -5,13 +5,17 @@ const tracksReducer = (state = {}, action) => {
   const nextState = Object.assign({}, state);
 
   switch(action.type) {
-    case RECEIVE_TRACKS:
-      return action.tracks.tracks;
 
     case RECEIVE_TRACK:
       nextState[action.track.id] = action.track;
       return nextState;
 
+
+    case RECEIVE_TRACKS:
+      return action.tracks.tracks;
+
+
+      
     case REMOVE_TRACK:
       delete nextState[action.trackId];
       return nextState;
@@ -19,5 +23,8 @@ const tracksReducer = (state = {}, action) => {
     default:
       return state;
   }
+
 }
+
+
 export default tracksReducer;

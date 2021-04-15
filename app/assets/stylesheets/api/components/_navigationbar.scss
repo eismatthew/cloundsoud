@@ -1,0 +1,50 @@
+.navigationbar {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 90;
+    background-color: rgb(95, 93, 93);
+    color: rgb(238, 238, 238);
+    width: 100%;
+    top: 0;
+    max-height: 70px;
+}
+
+
+
+.navigationbar-container {
+    display: flex;
+    justify-content: space-between;
+    width: 1250px;
+}
+
+.navigationbar-item {
+    display: block;
+    padding: 12px 0;
+    width: 100px;
+    height: 33px;
+    box-sizing: border-box;
+    text-align: center;
+    outline: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.navigationbar-icon {
+    display: block;
+}
+
+.navigationbar-icon-2 {
+    display: block;
+    width: 120px;
+    height: 33px;
+}
+
+.navigationbar-left{
+    display: flex;
+}
+
+.navigationbar-right{
+    display: flex;
+    align-items: center;
+}
