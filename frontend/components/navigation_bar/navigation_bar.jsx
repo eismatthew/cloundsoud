@@ -10,7 +10,7 @@ class NavigationBar extends React.Component {
     render() {
 
         const navicon = this.props.currentUser ? 
-        (<Link classname='navigationbar-icon' to='/discover' />
+        (<Link className='navigationbar-icon' to='/discover' />
         ) : (
         <Link className='navigationbar-icon-2' to='/' />
         );

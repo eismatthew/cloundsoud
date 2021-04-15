@@ -1,15 +1,43 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// import orbital from '../../../app/assets/audio';
 
 class TrackItems extends React.Component {
   constructor(props){
     super(props);
     this.state = {
       played: false,
-      playing: false
+      playing: false,
     };
+
+    // const audioTrack = new Audio(orbital); ////////
+
+    
+    const playTrack = () => {
+      audioTrack.play();
+    }
+    
+    
+    const pauseTrack = () => {
+      audioTrack.pause();
+    }
+    
+   
+    const stopTrack = () => {
+      audioTrack.pause();
+      audioTrack.currentTime = 0;
+    }
+
+
+
+  
     this.handlePlay = this.handlePlay.bind(this);
   }
+
+  
+
+
+  
 
   handlePlay() {
     if (!this.state.played) {
@@ -17,10 +45,10 @@ class TrackItems extends React.Component {
         id: this.props.track.id,
         plays: this.props.track.plays + 1
       });
-         this.setState({ played: true });
+        this.setState({ played: true });
     }
 
-        this.setState({ playing: !this.state.playing });
+      this.setState({ playing: !this.state.playing });
   }
 
   render() {

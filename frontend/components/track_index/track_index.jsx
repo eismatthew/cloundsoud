@@ -11,11 +11,11 @@ class TrackIndex extends React.Component {
         this.state = {
         playing: false,
         played: false,
-        editing: false
+        //
         };
         
         this.handlePlay = this.handlePlay.bind(this);
-        // this.handleEdit = this.handleEdit.bind(this);
+        // 
         this.handleDelete = this.handleDelete.bind(this);
     }
 
@@ -47,7 +47,7 @@ class TrackIndex extends React.Component {
         if (!this.props.track)
         return null;
 
-        const isArtist = this.props.currentUser && (this.props.currentUser.id === this.props.track.uploader_id);
+        const isArtist = this.props.currentUser && (this.props.currentUser.id === this.props.track.artist_id);
 
         const trackFormInputs = isArtist ? (
             <form>
@@ -59,6 +59,9 @@ class TrackIndex extends React.Component {
 
         return (
             //image somewhere in here?
+            <>
+            <NavigationBarContainer />
+            <Modal />
             <div className='track-index-parent'>
 
                 <div className='track-container'>
@@ -111,6 +114,7 @@ class TrackIndex extends React.Component {
                     </div>
                 </div>
             </div>
+            </>
         )
     }
 

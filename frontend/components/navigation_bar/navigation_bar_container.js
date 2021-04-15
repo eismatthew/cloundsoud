@@ -1,5 +1,5 @@
   import { connect } from 'react-redux';
-import { logoutUser } from '../../actions/session_actions';
+import { logoutCurrentUser } from '../../actions/session_actions';
 import { openModal } from '../../actions/modal_actions';
 import NavigationBar from './navigation_bar';
 
@@ -8,7 +8,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  logout: () => dispatch(logoutUser()),
+  logout: () => dispatch(logoutCurrentUser()),
   openModal: modal => dispatch(openModal(modal))
 });
 

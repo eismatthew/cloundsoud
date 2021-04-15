@@ -8,11 +8,11 @@ import {
     HashRouter
   } from 'react-router-dom';
 
+  import Modal from './modal/modal';
 import SplashContainer from './splash/splash_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import LogInFormContainer from './session_form/login_form_container';
 import SignUpFormContainer from './session_form/signup_form_container';
-import Modal from './modal/modal';
 import DiscoverContainer from './discover/discover_container';
 import TrackIndexContainer from './track_index/track_index_container';
 
@@ -20,9 +20,9 @@ import TrackIndexContainer from './track_index/track_index_container';
       <div className='app'>
         <Modal />
           <header>
-              <Link to='/' className='header-link'>
+              <Link to='/discover' className='header-link'>
                
-                  {/* <h1>Cloundsoud</h1> */}
+                  
               </Link>
           </header>
         <Switch>

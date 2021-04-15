@@ -1,0 +1,35 @@
+.discover-parent {
+    
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    border-top: 0;
+    justify-content: space-between;
+    min-height: 1000px;
+    display: flex;
+    justify-content: space-between;
+    width: 1240px;
+
+}
+
+
+.discover-container {
+    margin-left: 30px;
+    padding: 30px 30px 0 0;
+    border-right: 1px solid lightgray;
+    width: 650px;
+    h1 {
+      font-size: 28px;
+    }
+
+}
+
+.trackitems-container {
+    
+    img {
+        height: 100px;
+        width: 100px;
+    }
+
+    
+}
