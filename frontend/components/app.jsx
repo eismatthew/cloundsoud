@@ -5,7 +5,6 @@ import {
     Redirect,
     Switch,
     Link,
-    HashRouter
   } from 'react-router-dom';
 
   import Modal from './modal/modal';
