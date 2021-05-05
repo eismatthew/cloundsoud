@@ -15,6 +15,8 @@ import SignUpFormContainer from './session_form/signup_form_container';
 import DiscoverContainer from './discover/discover_container';
 import TrackIndexContainer from './track_index/track_index_container';
 
+
+
   const App = () => (
       <div className='app'>
         <Modal />
