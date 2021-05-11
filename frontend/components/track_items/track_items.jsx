@@ -56,6 +56,7 @@ class TrackItems extends React.Component {
       <div className="trackitems-container">
         <Link className="trackitems-song-art" to={`/tracks/${this.props.track.id}`}><img src={window.bloom}/></Link>
         
+        
         <div className="trackitems-info">
           <div className="trackitems-date-title">
             <div className="trackitems-title-container">
