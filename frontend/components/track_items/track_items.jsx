@@ -79,5 +79,4 @@ class TrackItems extends React.Component {
     )
   }
 }
-
 export default TrackItems;
