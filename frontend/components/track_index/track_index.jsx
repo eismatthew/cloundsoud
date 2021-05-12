@@ -14,6 +14,7 @@ class TrackIndex extends React.Component {
         //
         };
         
+
         this.handlePlay = this.handlePlay.bind(this);
         // 
         this.handleDelete = this.handleDelete.bind(this);
@@ -29,6 +30,7 @@ class TrackIndex extends React.Component {
             id: this.props.track.id,
             plays: this.props.track.plays + 1
         });
+        
             this.setState({ played: true });
         }
         this.setState({ playing: !this.state.playing });
