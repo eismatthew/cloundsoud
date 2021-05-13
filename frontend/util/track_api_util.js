@@ -12,7 +12,6 @@ export const fetchTrack = trackId => (
       url: `/api/tracks/${trackId}`
     })
 );
-  
 
 export const createTrack = track => (
     $.ajax({
@@ -21,7 +20,6 @@ export const createTrack = track => (
       data: { track }
     })
 );
-  
   
 export const deleteTrack = trackId => (
     $.ajax({
