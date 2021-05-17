@@ -21,6 +21,7 @@ export const createTrack = track => (
     })
 );
   
+
 export const deleteTrack = trackId => (
     $.ajax({
       method: "DELETE",
