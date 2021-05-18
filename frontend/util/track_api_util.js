@@ -5,7 +5,6 @@ export const fetchAllTracks = () => (
     })
 );
   
-
 export const fetchTrack = trackId => (
     $.ajax({
       method: "GET",
@@ -20,7 +19,6 @@ export const createTrack = track => (
       data: { track }
     })
 );
-  
 
 export const deleteTrack = trackId => (
     $.ajax({
