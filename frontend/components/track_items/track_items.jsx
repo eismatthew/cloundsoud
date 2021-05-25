@@ -8,6 +8,7 @@ class TrackItems extends React.Component {
     this.state = {
       played: false,
       playing: false,
+      audio: audio,
     };
 
     // const audioTrack = new Audio(orbital); ////////
