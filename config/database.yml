@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: cloundsoud_production
+  database: cloundsoud_pro
   username: cloundsoud
   password: <%= ENV['CLOUNDSOUD_DATABASE_PASSWORD'] %>

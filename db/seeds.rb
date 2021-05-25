@@ -6,14 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-demoUser = User.create({username: 'Demo_User', email: 'Demo_Email', password: '123456'})
-
-demoTrack = Track.create({artist_id: 1, title: 'Test Track', description: 'Test Description', plays: 400 })
-
-# ---
-
-
-
 require 'open-uri' 
 
 
@@ -22,16 +14,6 @@ Track.destroy_all
 
 #Users
 artist_mstre = User.create({username: 'MSTRE', email: 'mstre_music@gmail.com', password: '123456'})
-file = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/bloom_songart.jpg')
-file = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Profilepics/mstre_profilepic.jpg')
-track_bloom = Track.create({artist_id: 1, title: 'bloom', description: 'This is one of my own songs! Hope you enjoy.', plays: 0 })
-track_orbital = Track.create({artist_id: 1, title: 'Orbital (ft. squeeda)', description: 'Another song I wrote with my good friend, squeeda', plays: 0 })
-track_lowtide = Track.create({artist_id: 1, title: 'Low Tide', description: 'This song is a nice blend between house music and guitar', plays: 0 })
-
-
-
-
-
 artist_deathpact = User.create({username: 'Deathpact', email: 'deathpact@email.com', password: '123456'})
 artist_krono = User.create({username: 'KRONO', email: 'krono@email.com', password: '123456'})
 artist_jackal = User.create({username: 'Jackal', email: 'jackal@email.com', password: '123456'})
@@ -44,11 +26,9 @@ demoUser = User.create({username: 'Demo_User', email: 'Demo_Email', password: '1
 
 
 #Tracks (tracks and their owners are ordered in respective order so that user Id's match with Artist Id's)
-# track_bloom = Track.create({artist_id: 1, title: 'bloom', description: 'This is one of my own songs! Hope you enjoy.', plays: 0 })
-
-
+track_bloom = Track.create({artist_id: 1, title: 'bloom', description: 'This is one of my own songs! Hope you enjoy.', plays: 0 })
 track_lowtide = Track.create({artist_id: 1, title: 'Low Tide', description: 'This song is a nice blend between house music and guitar', plays: 0 })
-# track_orbital = Track.create({artist_id: 1, title: 'Orbital (ft. squeeda)', description: 'Another song I wrote with my good friend, squeeda', plays: 0 })
+track_orbital = Track.create({artist_id: 1, title: 'Orbital (ft. squeeda)', description: 'Another song I wrote with my good friend, squeeda', plays: 0 })
 track_danger = Track.create({artist_id: 2, title: 'Danger', description: 'Deathpact is an anonymous electronic music artist', plays: 0 })
 track_dancin = Track.create({artist_id: 3, title: 'Aaron Smith - Dancin (Krono Remix)', description: '(temporary description)', plays: 0 })
 track_feelit = Track.create({artist_id: 4, title: 'Feel It', description: '(temporary description)', plays: 0 })
@@ -62,8 +42,6 @@ track_springshit = Track.create({artist_id: 9, title: 'Spring Shit (ft. Jacuzzi)
 
 
 # :song_art Image Files
-
-
 file = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/aimh_songart.jpg')
 file = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/bloom_songart.jpg')
 file = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/dancin_songart.jpg')
@@ -103,3 +81,13 @@ file = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/bloom.mp3
 file = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/orbital.mp3')
 file = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/sky+things.mp3')
 file = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/Alan+Walker+-+Faded+(squeeda+remix).mp3')
+
+
+
+
+
+
+
+
+#attach assets to models
+mstre.profilepic.attach(io: file, filename: 'bloom.jpg')
