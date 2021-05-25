@@ -6,5 +6,8 @@ if track.song_art.attached?
 end
 
 if track.audio_file.attached?
-    
+    json.audioFile url_for(track.audio_file)
+else
+  json.audioFile ""
 end
+
