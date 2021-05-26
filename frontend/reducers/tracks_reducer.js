@@ -6,14 +6,14 @@ const tracksReducer = (state = {}, action) => {
 
   switch(action.type) {
 
+
+    case RECEIVE_TRACKS:
+      return action.tracks;
+
+
     case RECEIVE_TRACK:
       nextState[action.track.id] = action.track;
       return nextState;
-
-
-    case RECEIVE_TRACKS:
-      return action.tracks.tracks;
-
 
       
     case REMOVE_TRACK:

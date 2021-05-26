@@ -5,33 +5,32 @@ import { Link } from "react-router-dom";
 class TrackItems extends React.Component {
   constructor(props){
     super(props);
+
+
+    let audio;
+    if (this.props.track) audio = new Audio(this.props.track.audioFile);
+
     this.state = {
       played: false,
       playing: false,
       audio: audio
     };
 
-    // const audioTrack = new Audio(orbital); ////////
-    let audio;
-    if (this.props.track) audio = new Audio(this.props.track.audioFile);
     
-    const playTrack = () => {
-      audioTrack.play();
-    }
+    // const playTrack = () => {
+    //   audioTrack.play();
+    // }
     
     
-    const pauseTrack = () => {
-      audioTrack.pause();
-    }
+    // const pauseTrack = () => {
+    //   audioTrack.pause();
+    // }
     
    
-    const stopTrack = () => {
-      audioTrack.pause();
-      audioTrack.currentTime = 0;
-    }
-
-
-
+    // const stopTrack = () => {
+    //   audioTrack.pause();
+    //   audioTrack.currentTime = 0;
+    // }
   
     this.handlePlay = this.handlePlay.bind(this);
   }
@@ -50,7 +49,11 @@ class TrackItems extends React.Component {
         this.setState({ played: true });
     }
 
-      this.setState({ playing: !this.state.playing });
+    this.setState({ playing: !this.state.playing });
+
+
+
+
   }
 
   render() {

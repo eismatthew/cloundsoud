@@ -37,67 +37,67 @@ demoUser = User.create({username: 'Demo_User', email: 'Demo_Email', password: '1
 
 #Tracks (tracks and their owners are ordered in respective order so that user Id's match with Artist Id's)
 track_bloom = Track.create({artist_id: 1, title: 'bloom', description: 'This is one of my own songs! Hope you enjoy.', plays: 0 })
-track_bloom_audio = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/bloom.mp3')
+track_bloom_audio = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/bloom.mp3')
 track_bloom.audio_file.attach(io: track_bloom_audio, filename: 'bloom.mp3')
 
 
 track_lowtide = Track.create({artist_id: 1, title: 'Low Tide', description: 'This song is a nice blend between house music and guitar', plays: 0 })
-track_lowtide_audio = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/Low+Tide.mp3')
+track_lowtide_audio = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/Low+Tide.mp3')
 track_lowtide.audio_file.attach(io: track_lowtide_audio, filename: 'lowtide.mp3')
 
 
 track_orbital = Track.create({artist_id: 1, title: 'Orbital (ft. squeeda)', description: 'Another song I wrote with my good friend, squeeda', plays: 0 })
-track_orbital_audio = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/orbital.mp3')
+track_orbital_audio = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/orbital.mp3')
 track_orbital.audio_file.attach(io: track_orbital_audio, filename: 'orbital.mp3')
 
 
 track_danger = Track.create({artist_id: 2, title: 'Danger', description: 'Deathpact is an anonymous electronic music artist', plays: 0 })
-track_danger_audio = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/danger.mp3')
+track_danger_audio = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/danger.mp3')
 track_danger.audio_file.attach(io: track_danger_audio, filename: 'danger.mp3')
 
 
 track_dancin = Track.create({artist_id: 3, title: 'Aaron Smith - Dancin (Krono Remix)', description: '(temporary description)', plays: 0 })
-track_dancin_audio = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/Aaron+Smith+-+Dancin+(Remix+by+KRONO).mp3')
+track_dancin_audio = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/Aaron+Smith+-+Dancin+(Remix+by+KRONO).mp3')
 track_dancin.audio_file.attach(io: track_dancin_audio, filename: 'dancin.mp3')
 
 
 track_feelit = Track.create({artist_id: 4, title: 'Feel It', description: '(temporary description)', plays: 0 })
-track_feelit_audio = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/Feel+It+(feat.+Anfa+Rose)+(1).mp3')
+track_feelit_audio = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/Feel+It+(feat.+Anfa+Rose)+(1).mp3')
 track_feelit.audio_file.attach(io: track_feelit_audio, filename: 'feelit.mp3')
 
 
 track_faded = Track.create({artist_id: 5, title: 'Alan Walker - Faded (squeeda remix)', description: '(temporary description)', plays: 0 })
-track_faded_audio = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/Alan+Walker+-+Faded+(squeeda+remix).mp3')
+track_faded_audio = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/Alan+Walker+-+Faded+(squeeda+remix).mp3')
 track_faded.audio_file.attach(io: track_faded_audio, filename: 'faded.mp3')
 
 
 track_pedals = Track.create({artist_id: 5, title: 'Biblio - Pedals (squeeda remix)', description: '(temporary description)', plays: 0 })
-track_pedals_audio = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/pedals.mp3')
+track_pedals_audio = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/pedals.mp3')
 track_pedals.audio_file.attach(io: track_pedals_audio, filename: 'pedals.mp3')
 
 
 track_skythings = Track.create({artist_id: 5, title: 'sky things', description: 'the best lofi song you will ever hear', plays: 0 })
-track_skythings_audio = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/sky+things.mp3')
+track_skythings_audio = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/sky+things.mp3')
 track_skythings.audio_file.attach(io: track_skythings_audio, filename: 'skythings.mp3')
 
 
 track_aimh = Track.create({artist_id: 6, title: 'All In My Head (ft. AWOLNATION)', description: '(temporary description)', plays: 0 })
-track_aimh_audio = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/allinmyhead.mp3')
+track_aimh_audio = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/allinmyhead.mp3')
 track_aimh.audio_file.attach(io: track_aimh_audio, filename: 'aimh.mp3')
 
 
 track_mumbai = Track.create({artist_id: 7, title: 'Mumbai Power (ft. BEAM)', description: '(temporary description)', plays: 0 })
-track_mumbai_audio = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/mumbaipower.mp3')
+track_mumbai_audio = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/mumbaipower.mp3')
 track_mumbai.audio_file.attach(io: track_mumbai_audio, filename: 'mumbai.mp3')
 
 
 track_ramen = Track.create({artist_id: 8, title: 'Ramen', description: '(temporary description)', plays: 0 })
-track_ramen_audio = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/ramen.mp3')
+track_ramen_audio = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/ramen.mp3')
 track_ramen.audio_file.attach(io: track_ramen_audio, filename: 'ramen.mp3')
 
 
 track_springshit = Track.create({artist_id: 9, title: 'Spring Shit (ft. Jacuzzi)', description: '(temporary description)', plays: 0 })
-track_springshit_audio = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/springshit.mp3') 
+track_springshit_audio = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/springshit.mp3') 
 track_springshit.audio_file.attach(io: track_springshit_audio, filename: 'springshit.mp3')
 
 
@@ -105,19 +105,19 @@ track_springshit.audio_file.attach(io: track_springshit_audio, filename: 'spring
 
 
 # :song_art Image Files
-song_art1 = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/bloom_songart.jpg')
-song_art2 = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/lowtide_songart.jpg')
-song_art3 = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/orbital_songart.jpg')
-song_art4 = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/danger_songart.jpg')
-song_art5 = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/dancin_songart.jpg')
-song_art6 = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/feelit_songart.jpg')
-song_art7 = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/squeedafaded_songart.jpg')
-song_art8 = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/pedals_songart.jpg')
-song_art9 = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/skythings_songart.png')
-song_art10 = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/aimh_songart.jpg')
-song_art11 = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/mumbai_songart.jpg')
-song_art12 = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/ramen_songart.jpg')
-song_art13 = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/mr+carmack+jacuzzi.jpg')
+song_art1 = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/bloom_songart.jpg')
+song_art2 = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/lowtide_songart.jpg')
+song_art3 = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/orbital_songart.jpg')
+song_art4 = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/danger_songart.jpg')
+song_art5 = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/dancin_songart.jpg')
+song_art6 = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/feelit_songart.jpg')
+song_art7 = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/squeedafaded_songart.jpg')
+song_art8 = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/pedals_songart.jpg')
+song_art9 = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/skythings_songart.png')
+song_art10 = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/aimh_songart.jpg')
+song_art11 = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/mumbai_songart.jpg')
+song_art12 = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/ramen_songart.jpg')
+song_art13 = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Songart/mr+carmack+jacuzzi.jpg')
 
 
 
@@ -145,32 +145,32 @@ track_springshit.song_art.attach(io: song_art13, filename: 'springshitart img')
 
 
 # :profilepic Image Files
-profile1 = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Profilepics/mstre_profilepic.jpg')
-profile2 = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Profilepics/deathpact_profilepic.jpg')
-profile3 = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Profilepics/krono_profilepic.jpg')
-profile4 = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Profilepics/jackal_profilepic.jpg')
-profile5 = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Profilepics/squeedaprofilepic.jfif')
-profile6 = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Profilepics/ktn_profilepic.jpg')
-profile7 = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Profilepics/skrillexprofilepic.jpg')
-profile8 = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Profilepics/medasin_profilepic.jpg')
-profile9 = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Profilepics/mrcarmack_profilepic.jpg')
+profile1 = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Profilepics/mstre_profilepic.jpg')
+profile2 = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Profilepics/deathpact_profilepic.jpg')
+profile3 = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Profilepics/krono_profilepic.jpg')
+profile4 = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Profilepics/jackal_profilepic.jpg')
+profile5 = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Profilepics/squeedaprofilepic.jfif')
+profile6 = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Profilepics/ktn_profilepic.jpg')
+profile7 = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Profilepics/skrillexprofilepic.jpg')
+profile8 = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Profilepics/medasin_profilepic.jpg')
+profile9 = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Profilepics/mrcarmack_profilepic.jpg')
 
 
 
 # Track Audio Files
 
-# file = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/danger.mp3')
-# file = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/Aaron+Smith+-+Dancin+(Remix+by+KRONO).mp3')
-# file = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/allinmyhead.mp3')
-# file = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/Feel+It+(feat.+Anfa+Rose)+(1).mp3')
-# file = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/Low+Tide.mp3')
-# file = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/mumbaipower.mp3')
-# file = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/springshit.mp3')
-# file = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/bloom.mp3')
-# file = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/orbital.mp3')
-# file = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/sky+things.mp3')
-# file = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/Alan+Walker+-+Faded+(squeeda+remix).mp3')
-# file = open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/pedals.mp3')
+# file = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/danger.mp3')
+# file = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/Aaron+Smith+-+Dancin+(Remix+by+KRONO).mp3')
+# file = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/allinmyhead.mp3')
+# file = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/Feel+It+(feat.+Anfa+Rose)+(1).mp3')
+# file = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/Low+Tide.mp3')
+# file = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/mumbaipower.mp3')
+# file = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/springshit.mp3')
+# file = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/bloom.mp3')
+# file = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/orbital.mp3')
+# file = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/sky+things.mp3')
+# file = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/Alan+Walker+-+Faded+(squeeda+remix).mp3')
+# file = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Audio/pedals.mp3')
 
 
 
