@@ -8,7 +8,7 @@ const tracksReducer = (state = {}, action) => {
 
 
     case RECEIVE_TRACKS:
-      return action.tracks;
+      return action.tracks.tracks;
 
 
     case RECEIVE_TRACK:

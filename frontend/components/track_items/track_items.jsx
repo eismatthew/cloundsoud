@@ -17,37 +17,46 @@ class TrackItems extends React.Component {
     };
 
     
-    // const playTrack = () => {
-    //   audioTrack.play();
-    // }
-    
-    
-    // const pauseTrack = () => {
-    //   audioTrack.pause();
-    // }
-    
    
-    // const stopTrack = () => {
-    //   audioTrack.pause();
-    //   audioTrack.currentTime = 0;
-    // }
   
     this.handlePlay = this.handlePlay.bind(this);
+    this.playTrack = this.playTrack.bind(this);
+    this.pauseTrack = this.pauseTrack.bind(this);
+    this.stopTrack = this.stopTrack.bind(this);
+  }
+
+  
+  playTrack () {
+        this.state.audio.play();
+  }
+      
+      
+  pauseTrack () {
+        this.state.audio.pause();
+  }
+      
+    
+  stopTrack () {
+        this.state.audio.pause();
+        this.state.audio.currentTime = 0;
   }
 
   
 
-
-  
-
   handlePlay() {
+    // debugger
     if (!this.state.played) {
       this.props.updateTrack({
         id: this.props.track.id,
         plays: this.props.track.plays + 1
       });
         this.setState({ played: true });
+        this.playTrack();
+
     }
+    else
+      this.pauseTrack();
+      // this.setState({ played: false });
 
     this.setState({ playing: !this.state.playing });
 
@@ -57,6 +66,7 @@ class TrackItems extends React.Component {
   }
 
   render() {
+    // debugger
     return (
       <div className="trackitems-container">
         <Link className="trackitems-song-art" to={`/tracks/${this.props.track.id}`}><img src={window.bloom}/></Link>

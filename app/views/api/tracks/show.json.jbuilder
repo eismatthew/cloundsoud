@@ -1,4 +1,4 @@
 json.partial! "track", track: @track
 
-json.photoUrls @track.song_art.map { |file| url_for(file) }
-json.songUrls @track.audio_file.map { |file| url_for(file) }
+json.photoUrls url_for(@track.song_art)
+json.songUrls url_for(@track.audio_file)
