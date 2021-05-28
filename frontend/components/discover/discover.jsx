@@ -32,6 +32,8 @@ class Discover extends React.Component {
         </ul>
     ));
 
+
+    
     return (
       <>
       <NavigationBarContainer />

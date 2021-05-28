@@ -140,10 +140,6 @@ track_springshit.song_art.attach(io: song_art13, filename: 'springshitart img')
 
 
 
-
-
-
-
 # :profilepic Image Files
 profile1 = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Profilepics/mstre_profilepic.jpg')
 profile2 = URI.open('https://cloundsoud-seeds.s3-us-west-1.amazonaws.com/Profilepics/deathpact_profilepic.jpg')
