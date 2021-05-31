@@ -20,4 +20,6 @@ const mapDispatchToProps = dispatch => ({
   deleteTrack: trackId => dispatch(deleteTrack(trackId))
 });
 
+
+
 export default connect(mapStateToProps, mapDispatchToProps)(Discover);
