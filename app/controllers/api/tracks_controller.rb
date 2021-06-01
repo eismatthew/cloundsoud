@@ -26,6 +26,7 @@ class Api::TracksController < ApplicationController
         render json: {}
     end
 
+    
     def update
     @track = Track.find_by(id: params[:id])
         if @track.update(track_params)

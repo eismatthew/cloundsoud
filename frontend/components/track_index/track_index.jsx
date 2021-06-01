@@ -36,16 +36,20 @@ class TrackIndex extends React.Component {
         this.setState({ playing: !this.state.playing });
     }
 
+
     
     handleDelete() {
         this.props.deleteTrack(this.props.track.id)
         .then(this.props.history.push('/discover'));
     }
 
+
+
     // handleEdit() {
     //     this.props.openModal('edit');
     // }
 
+    
     render () {
         if (!this.props.track)
         return null;
