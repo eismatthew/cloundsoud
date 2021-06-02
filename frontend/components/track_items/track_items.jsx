@@ -43,26 +43,52 @@ class TrackItems extends React.Component {
 
   
 
-  handlePlay() {
-    // debugger
+  // handlePlay() {
+  //   // debugger
+  //   if (!this.state.played) {
+  //     this.props.updateTrack({
+  //       id: this.props.track.id,
+  //       plays: this.props.track.plays + 1
+  //     });
+  //       this.setState({ played: true });
+  //       this.playTrack();
+
+  //   }
+  //   else
+  //     this.pauseTrack();
+  //     // this.setState({ played: false });
+
+  //   this.setState({ playing: !this.state.playing });
+
+
+
+
+  // }
+
+   handlePlay() {
     if (!this.state.played) {
       this.props.updateTrack({
         id: this.props.track.id,
         plays: this.props.track.plays + 1
       });
-        this.setState({ played: true });
-        this.playTrack();
-
+      this.setState({ played: true });
     }
-    else
-      this.pauseTrack();
-      // this.setState({ played: false });
+    
+    let currentTrackId = null;
+    if (this.props.currentTrack) currentTrackId = this.props.currentTrack.id;
+
+    if (currentTrackId !== this.props.track.id){
+      this.props.receivePlayTrack(this.props.track.id);
+    }
 
     this.setState({ playing: !this.state.playing });
-
-
-
-
+    if (!this.state.playing) {
+      this.props.playTrack();
+      if (currentTrackId) document.getElementById("audio").play();
+    } else {
+      this.props.pauseTrack();
+      if (currentTrackId) document.getElementById("audio").pause();
+    }
   }
 
   

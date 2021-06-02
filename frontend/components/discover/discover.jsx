@@ -43,11 +43,11 @@ class Discover extends React.Component {
         <ul>{tracks}</ul>
         </div>
             <div className="footer">
-                <section className='discover-bottom'>   
+                <footer className='discover-bottom'>   
                     <span><a href="https://github.com/eismatthew">GitHub</a></span>
                     <span><a href="https://www.linkedin.com/in/matthew-eis/">LinkedIn</a></span>
                     <p>Language: English (US)</p>
-                </section>
+                </footer>
             </div>
         </div>
       </>

@@ -11,6 +11,7 @@ class TrackIndex extends React.Component {
         this.state = {
         playing: false,
         played: false,
+        audio: null
         //
         };
         
@@ -21,8 +22,14 @@ class TrackIndex extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchTrack(this.props.match.params.trackId);
-    }
+        this.props.fetchTrack(this.props.match.params.trackId)
+        .then(()=>{
+        let audio = new Audio(this.props.track.audioFile);
+        this.setState({ audio: audio });
+    });
+    // window.scrollTo(0, 0);
+     }
+
 
     handlePlay() {
         if (!this.state.played) {
@@ -33,7 +40,10 @@ class TrackIndex extends React.Component {
         
             this.setState({ played: true });
         }
-        this.setState({ playing: !this.state.playing });
+        // this.setState({ playing: !this.state.playing });
+
+
+
     }
 
 
@@ -58,7 +68,9 @@ class TrackIndex extends React.Component {
 
         const trackFormInputs = isArtist ? (
             <form>
+                 {/* <button className="track-action-button" onClick={this.handleEdit}>Edit</button> */}
                 <button className='track-form-button' onClick={this.handleDelete}>Delete Track</button>
+                
             </form>
         ) : (<form></form>
         );
