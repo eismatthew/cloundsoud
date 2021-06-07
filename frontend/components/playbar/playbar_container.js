@@ -14,4 +14,5 @@ const mapDispatchToProps = dispatch => ({
   pauseTrack: () => dispatch(pauseTrack())
 });
 
+
 export default connect(mapStateToProps, mapDispatchToProps)(PlayBar);

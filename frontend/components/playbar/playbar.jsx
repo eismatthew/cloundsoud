@@ -12,6 +12,7 @@ class PlayBar extends React.Component {
     }
   }
 
+
   
   render() {
     if (!this.props.currentTrack) return null;
