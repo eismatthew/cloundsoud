@@ -33,7 +33,7 @@ import UserIndexContainer from "./user_index/user_index_container";
             <Route exact path='/' component={SplashContainer} />
             <Route exact path='/discover' component={DiscoverContainer} />
             <Route exact path='/tracks/:trackId' component={TrackIndexContainer} />
-             <Route exact path="/users/:userId" component={UserIndexContainer} />
+            <Route exact path="/users/:userId" component={UserIndexContainer} />
             <AuthRoute exact path='/login' component={LogInFormContainer} />
             <AuthRoute exact path='/signup' component={SignUpFormContainer} />
             <Redirect to='/'/>

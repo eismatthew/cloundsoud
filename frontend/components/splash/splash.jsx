@@ -1,10 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 
 const Splash = ({ currentUser, logout, openModal, loginDemoUser }) => {
-   
-    
+    let history = useHistory();
+
+    const demoLogin = () => {
+       loginDemoUser().then(() => {
+          history.push("/discover")
+       })
+    }
 
 
     const sessionLinks = () => (
@@ -17,7 +23,7 @@ const Splash = ({ currentUser, logout, openModal, loginDemoUser }) => {
             <button className='button-login' onClick={() => openModal('login')}>Sign In</button>
             <button className='button-signup' onClick={() => openModal('signup')}>Create Account</button>
             
-            <button className="button-login" onClick={() => loginDemoUser()}>Demo Login</button>
+            <button className="button-login" onClick={() => demoLogin()}>Demo Login</button>
             <br/>
             </nav>
         )

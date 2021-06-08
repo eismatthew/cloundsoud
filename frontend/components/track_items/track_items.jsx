@@ -10,6 +10,8 @@ class TrackItems extends React.Component {
     let audio;
     if (this.props.track) audio = new Audio(this.props.track.audioFile);
 
+    
+
     this.state = {
       played: false,
       playing: false,
@@ -96,7 +98,7 @@ class TrackItems extends React.Component {
     // debugger
     return (
       <div className="trackitems-container">
-        <Link className="trackitems-song-art" to={`/tracks/${this.props.track.id}`}><img src={window.bloom}/></Link>
+        <Link className="trackitems-song-art" to={`/tracks/${this.props.track.id}`}><img src={this.props.track.albumArt}/></Link>
         
       
 
