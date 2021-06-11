@@ -28,6 +28,7 @@ class Discover extends React.Component {
               receivePlayTrack={this.props.receivePlayTrack}
               playTrack={this.props.playTrack}
               pauseTrack={this.props.pauseTrack}
+              artist={this.props.users[track.artist_id]}
               />
         </ul>
     ));
@@ -41,6 +42,11 @@ class Discover extends React.Component {
         <div className="discover-container">
         {this.props.currentUser ? <></> : <h1>Hear the latest tracks from artists on CloundSoud:</h1>}
         <ul>{tracks}</ul>
+
+
+
+
+        
         </div>
             <div className="footer">
                 <footer className='discover-bottom'>   

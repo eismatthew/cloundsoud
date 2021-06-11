@@ -8,9 +8,9 @@ const mapStateToProps = state => {
     return { 
     currentUser: state.entities.users[state.session.id],
     tracks: Object.values(state.entities.tracks),
-    isPlaying: state.ui.playbar.isPlaying,
-    currentTrack: state.entities.tracks[state.ui.playbar.id]
-
+    // isPlaying: state.ui.playbar.isPlaying,
+    // currentTrack: state.entities.tracks[state.ui.playbar.id],
+    users: state.entities.users
     }
 };
 

@@ -7,7 +7,8 @@ import { receivePlayTrack, playTrack, pauseTrack } from '../../actions/play_acti
 const mapStateToProps = (state, ownProps) => ({
   track: state.entities.tracks[ownProps.match.params.trackId],
   currentUser: state.entities.users[state.session.id],
-  currentTrack: state.entities.tracks[state.ui.playbar.id]
+  currentTrack: state.entities.tracks[state.ui.playbar.id],
+  users: state.entities.users,
 });
 
 const mapDispatchToProps = dispatch => ({

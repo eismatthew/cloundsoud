@@ -1,24 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavigationBarContainer from '../navigation_bar/navigation_bar_container'
+import NavigationBarContainer from '../navigation_bar/navigation_bar_container';
 import Modal from "../modal/modal";
-
+import PlayButtonContainer from '../playbutton/playbutton_container';
 
 class TrackIndex extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-        playing: false,
-        played: false,
-        audio: null
-        //
-        };
+        // this.state = {
+        // // playing: false,
+        // // played: false,
+        // // audio: null
+        // //
+        // };
         
 
-        this.handlePlay = this.handlePlay.bind(this);
-        // 
-        this.handleDelete = this.handleDelete.bind(this);
+        // this.handlePlay = this.handlePlay.bind(this);
+        // // 
+        // this.handleDelete = this.handleDelete.bind(this);
     }
 
     componentDidMount() {
@@ -32,34 +32,36 @@ class TrackIndex extends React.Component {
 
 
     
-   handlePlay() {
-    if (!this.state.played) {
-      this.props.updateTrack({
-        id: this.props.track.id,
-        plays: this.props.track.plays + 1
-      });
-      this.setState({ played: true });
-    }
+//    handlePlay() {
+//     if (!this.state.played) {
+//       this.props.updateTrack({
+//         id: this.props.track.id,
+//         plays: this.props.track.plays + 1
+//       });
+//       this.setState({ played: true });
+//     }
     
-    let currentTrackId = null;
-    if (this.props.currentTrack) currentTrackId = this.props.currentTrack.id;
+//     let currentTrackId = null;
+//     if (this.props.currentTrack) currentTrackId = this.props.currentTrack.id;
 
-    if (currentTrackId !== this.props.track.id){
-      this.props.receivePlayTrack(this.props.track.id);
-    }
+//     if (currentTrackId !== this.props.track.id){
+//       this.props.receivePlayTrack(this.props.track.id);
+//     }
 
-    this.setState({ playing: !this.state.playing });
-    if (!this.state.playing) {
-      this.props.playTrack();
-      if (currentTrackId) document.getElementById("audio").play();
-    } else {
-      this.props.pauseTrack();
-      if (currentTrackId) document.getElementById("audio").pause();
-    }
-  }
+//     this.setState({ playing: !this.state.playing });
+//     if (!this.state.playing) {
+//       this.props.playTrack();
+//       if (currentTrackId) document.getElementById("audio").play();
+//     } else {
+//       this.props.pauseTrack();
+//       if (currentTrackId) document.getElementById("audio").pause();
+//     }
+//   }
 
 
-
+//   handleEdit() {
+//     this.props.openModal("edit");
+//   }
     
     handleDelete() {
         this.props.deleteTrack(this.props.track.id)
@@ -83,11 +85,11 @@ class TrackIndex extends React.Component {
             <form>
                  {/* <button className="track-action-button" onClick={this.handleEdit}>Edit</button> */}
                 <button className='track-form-button' onClick={this.handleDelete}>Delete Track</button>
-                
+                <button className="track-form-button" onClick={this.handleEdit}> Edit</button>
             </form>
         ) : (<form></form>
         );
-    
+       let artist = this.props.users[this.props.track.artist_id];
 
         return (
             //image somewhere in here?
@@ -103,9 +105,10 @@ class TrackIndex extends React.Component {
                             <span ><Link to={`/users/${this.props.track.artist_id}`}>{this.props.track.artist}</Link></span>
                             <h2>{this.props.track.title}</h2>
                             </div>
-                            <button className='track-play-button' onClick={this.handlePlay}>
+                            {/* <button className='track-play-button' onClick={this.handlePlay}>
                                 {this.state.playing ? 'pause' : 'play'}
-                            </button>
+                            </button> */}
+                             <PlayButtonContainer track={this.props.track} size="large" />
                         </div>
                     </div>
                 </div>
