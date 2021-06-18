@@ -18,7 +18,6 @@ class PlayButton extends React.Component {
     if (prevProps !== this.props) this.setState({ playing: this.isCurrentPlaying() });
   }
 
-  
 
   handlePlay() {
     if (!this.state.alreadyPlayed) {
