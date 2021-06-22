@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // import orbital from '../../../app/assets/audio';
+import { faPlay, } from "@fortawesome/free-solid-svg-icons";
 import PlayButtonContainer from '../playbutton/playbutton_container'
 
 
