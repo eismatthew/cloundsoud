@@ -14,8 +14,6 @@ class Discover extends React.Component {
     this.props.fetchAllTracks();
   }
 
-
-
   
 
   render() {
