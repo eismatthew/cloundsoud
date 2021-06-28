@@ -18,6 +18,7 @@ const mapStateToProps = state => {
 
 
 
+
 const mapDispatchToProps = dispatch => ({
   fetchAllTracks: () => dispatch(fetchAllTracks()),
   updateTrack: track => dispatch(updateTrack(track)),
