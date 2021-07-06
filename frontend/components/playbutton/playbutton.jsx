@@ -21,22 +21,41 @@ class PlayButton extends React.Component {
 
 
   handlePlay() {
+    // console.log(this.state.alreadyPlayed)
+    console.log(this.state.playing)
+
+
     if (!this.state.alreadyPlayed) {
       this.props.updateTrack({
         id: this.props.track.id,
         plays: this.props.track.plays + 1
-      });
+      }
+      )
       this.setState({ alreadyPlayed: true });
     }
     
-    if (!this.isCurrentTrack()) this.props.receivePlayTrack(this.props.track);
+  // console.log(this.state.alreadyPlayed)
 
-    this.setState({ playing: !this.state.playing });
+    if (!this.isCurrentTrack()) this.props.receivePlayTrack(this.props.track); //
+
+    // this.setState({ playing: !this.state.playing });
 
     if (!this.state.playing) {
+        // console.log("hello")
+    this.setState({ playing: true });
+
       this.props.playTrack();
+        // if (this.props.currentTrack) 
+        document.getElementById("audio").play();
+      console.log(this.state)
+
     } else {
+       this.setState({ playing: false });
+     
+
       this.props.pauseTrack();
+        // if (this.props.currentTrack) 
+        document.getElementById("audio").pause();
     }
   }
 
@@ -50,11 +69,18 @@ class PlayButton extends React.Component {
   }
 
   render() {
+
+    // console.log(this.isCurrentTrack())
+          // console.log(this.props.currentTrack)
+
+
+
     let thisTrackPlaying = this.isCurrentTrack() ? (this.state.playing && this.props.isPlaying) : false;
     let buttonClass = "button-play";
     if (this.props.size === "large") buttonClass += "-large";
 
     return (
+
       <button className={buttonClass} onClick={this.handlePlay}>
         {thisTrackPlaying ? <FontAwesomeIcon icon={faPause} /> : <FontAwesomeIcon icon={faPlay} />}
       </button>

@@ -4,11 +4,16 @@ import { updateTrack } from '../../actions/track_actions';
 import { receivePlayTrack, playTrack, pauseTrack } from '../../actions/play_actions';
 import PlayButton from './playbutton';
 
-const mapStateToProps = state => ({
+const mapStateToProps = 
+( state, ownProps ) => {
+  // debugger
+  return {
   currentTrack: state.ui.playbar.track,
   isPlaying: state.ui.playbar.isPlaying,
-  users: state.entities.users
-});
+  users: state.entities.users,
+  track: ownProps.track
+  }
+}
 
 const mapDispatchToProps = dispatch => ({
   updateTrack: track => dispatch(updateTrack(track)),

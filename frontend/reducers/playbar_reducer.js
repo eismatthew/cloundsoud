@@ -10,7 +10,7 @@ const playbarReducer = (state = _nullPlaying, action) => {
   const nextState =  Object.assign({}, state);
   switch(action.type) {
     case RECEIVE_PLAY_TRACK:
-      return Object.assign({}, state, { id: action.trackId });
+      return Object.assign({}, state, { id: action.track.id });
     case PLAY_TRACK:
       nextState["isPlaying"] = true;
       return nextState;
