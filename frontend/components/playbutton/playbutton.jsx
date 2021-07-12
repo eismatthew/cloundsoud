@@ -21,8 +21,9 @@ class PlayButton extends React.Component {
 
   
 
+
   handlePlay() {
-    // console.log(this.state.alreadyPlayed)
+    
     console.log(this.state.playing)
 
 
@@ -35,14 +36,15 @@ class PlayButton extends React.Component {
       this.setState({ alreadyPlayed: true });
     }
     
-  // console.log(this.state.alreadyPlayed)
+  
 
     if (!this.isCurrentTrack()) this.props.receivePlayTrack(this.props.track); //
 
     // this.setState({ playing: !this.state.playing });
 
     if (!this.state.playing) {
-        // console.log("hello")
+      
+
     this.setState({ playing: true });
 
       this.props.playTrack();
@@ -70,10 +72,6 @@ class PlayButton extends React.Component {
   }
 
   render() {
-
-    // console.log(this.isCurrentTrack())
-          // console.log(this.props.currentTrack)
-
 
 
     let thisTrackPlaying = this.isCurrentTrack() ? (this.state.playing && this.props.isPlaying) : false;

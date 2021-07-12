@@ -15,6 +15,7 @@ const mapStateToProps =
   }
 }
 
+
 const mapDispatchToProps = dispatch => ({
   updateTrack: track => dispatch(updateTrack(track)),
   receivePlayTrack: track => dispatch(receivePlayTrack(track)),
